@@ -3577,7 +3577,7 @@ section.bgservices h3 {
   line-height: 72px !important
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 1919px) {
   .works-item-content .works-number {
     position: relative;
     text-align: center;
