@@ -4215,6 +4215,10 @@ footer h3 {
   .to-be-same {
     width: auto !important
   }
+
+  .panneauxCSStop {
+    float: left;
+  }
 }
 
 .to-be-show {
