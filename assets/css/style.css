@@ -3243,7 +3243,7 @@ section.one h2 {
   text-transform: none !important;
   color: #261938 !important;
   line-height: 1.3 !important;
-  margin-bottom: 20px !important
+  margin-bottom: 20px;
 }
 
 section.one h2::before {
