@@ -3488,11 +3488,11 @@ section.bgservices h3 {
   width: 100%
 }
 
-@media only screen and (min-width: 1920px) {
+/* @media only screen and (min-width: 1920px) {
   .works-item-content::before {
     position: relative
   }
-}
+} */
 
 @media only screen and (max-width: 990px) {
   .works-item-content::before {
