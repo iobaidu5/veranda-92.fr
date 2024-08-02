@@ -3670,6 +3670,16 @@ section.bgservices h3 {
   opacity: 0
 }
 
+.contact-span{
+  display: block;
+    font-family: "CenturyGothic", sans-serif !important;
+    letter-spacing: 5px !important;
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+    line-height: 3 !important;
+    color: #261938 !important;
+}
+
 section.galerie li {
   margin-right: 20px
 }
