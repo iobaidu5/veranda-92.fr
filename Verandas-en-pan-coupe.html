@@ -88,8 +88,11 @@
       <div class="row justify-content-between w-100 flex-middle">
         <div class="col-md-5">
           <div class="Navbar_image">
-            <a href="./index.html" title="Accueil"><img loading="lazy" loading="lazy"
-                src="./assets/img/logoRN.png" class="Navbar_image-img" alt="Logo baies et vérandas" /></a>
+            <a href="./index.html" title="Accueil">
+              <img loading="lazy"
+                src="./assets/img/logoRN.png" class="Navbar_image-img" alt="Logo baies et vérandas" />
+              </a>
+              <img src="./assets/img/logo-veranda2.jpg" style="width: 140px;" class="img-responsive iimmgg" alt="Certification Menuisier">
           </div>
         </div>
         <div class="col-md-7 menu-haut">
@@ -152,6 +155,7 @@
       <div class="Navbar_image">
         <a href="./index.html" title="Accueil"><img loading="lazy" loading="lazy"
             src="./assets/img/logoRN.png" class="Navbar_image-img" alt="Logo baies et vérandas" /></a>
+            <img src="./assets/img/logo-veranda2.jpg" style="width: 140px;" class="img-responsive iimmgg" alt="Certification Menuisier">
       </div>
       <button class="navbar-toggler Navbar_toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -215,42 +219,73 @@
   
   <section class="one">
     <div class="container">
-         <form role="form" method="post" action="#carousel-header" class="p20">   <div class="row pre-reservation">
-        <div class="col-md-2 col-sm-6 clabel">
-           <div class=" padl form-group has-feedback ">
-              <div class="user ico2"></div>
-              <input type="text" name="lastname" id="form_lastname" value="" class="form-control " placeholder="Nom">                     </div>
+      <form class="menu_content-form" id="contactForm" method="post" action="https://jgviaboye9.execute-api.eu-west-3.amazonaws.com/prod/notify">
+        <input type="hidden" name="lang" value="fr" />
+        <input type="hidden" name="redirectUrl" value="/message-envoye" />
+        <input type="hidden" name="type" value="contact" />
+        <input type="hidden" name="website" value="" />
+        <input type="hidden" name="lang" value="fr" />
+        <input type="hidden" name="firstName" value="" />
+        <input type="hidden" name="key" value="6LeXVBoqAAAAABAkIjblZUxkAmr9MARktfUFRhYP" />
+        <div class="row pad1 align-items-center">
+          <div class="col-lg-2 col-md-6">
+            <div class="form-group has-feedback my-2">
+              <input type="text" class="form-control menu_content-form--input" id="lastname" name="lastname"
+                value="" placeholder="Nom">
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="form-group has-feedback my-2">
+              <input type="text" class="form-control menu_content-form--input" id="email" name="email" value=""
+                placeholder="Email">
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="form-group has-feedback my-2">
+              <input type="text" class="form-control menu_content-form--input" id="phone" name="phone" value=""
+                placeholder="Tél">
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="form-group has-feedback my-2">
+              <input type="text" name="zipcode" id="form_zipcode" value=""
+                class="form-control menu_content-form--input" placeholder="Code postale">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <div class="form-group has-feedback my-2">
+              <select name="subject" id="subject" class="form-control menu_content-form--input c-select">
+                <option>Prestation:</option>
+                <option>Verrières</option>
+                <option>Portails</option>
+                <option>Fenêtres</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="checkbox d-flex justify-content-center mb-2 mt-3">
+              <input name="condition" type="checkbox"
+                style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;" />
+              <span class="contact_content-form--label" style="font-size: 14px; color: #fff;">
+                En utilisant ce formulaire, vous acceptez le stockage et la gestion
+                de vos données par ce site * </span>
+              <i class="fa fa-info-square" aria-hidden="true"></i>
+            </div>
+            <div id="contact-form-response"></div>
+            <div class="form-group d-flex justify-content-center">
+              <div class="g-recaptcha" data-sitekey="6LeXVBoqAAAAAGZgYxkQnRnEnjuYF5BhvLk9UNQt">
+              </div>
+              <br />
+              <input style="display: none" type="submit" value="Submit" class="wpcf7-wpcf7-submit" />
+            </div>
+          </div>
+          <div class="col-lg-12 d-flex justify-content-center col-md-12">
+            <input id="btSubmit" class="menu_content-form--button" name="devis" type="submit" value="Envoyer">
+          </div>
         </div>
-        <div class="col-md-2 col-sm-6 clabel">
-           <div class=" padl form-group has-feedback ">
-              <div class="email ico2"></div>
-              <input type="text" name="email" id="form_email" value="" class="form-control " placeholder="Email">                     </div>
-        </div>
-        <div class="col-md-2 col-sm-6 clabel">
-           <div class="form-group has-feedback ">
-              <div class="phone ico2"></div>
-              <input type="text" name="phone" id="form_phone" value="" class="form-control" placeholder="Tél">                     </div>
-        </div>
-  
-        <div class="col-md-2 col-sm-6 clabel">
-           <div class=" padl form-group has-feedback ">
-              <div class="zipcode ico2"></div>
-              <input type="text" name="zipcode" id="form_zipcode" value="" class="form-control " placeholder="Code postale">                     </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-        <div class="form-group has-feedback ">
-          
-           <select name="subject" class="form-control" id="subject">
-           <option>Prestation:</option><option>Verrières</option><option>Portails</option><option>Fenêtres</option>         </select>
-        </div>
-        </div>
-        <div class="col-md-12 col-sm-12 text-center">
-           <button type="submit" name="devis" class="button1 btn-form">
-           <span class="txt">Envoyer</span>
-        </button>
-        </div>
-     </div>
-     </form>	</div>
+      </form>	
+    
+    </div>
   </section>
   <section class="two1">
     <div class="container">
@@ -266,7 +301,7 @@
     <div class="hr"></div>
     <p class="pr-0">Nos modèles de Vérandas</p>
       <div class="row">
-        <div class="col-sm-3 my-4">
+        <div class="col-lg-3 col-md-6 col-sm-12 my-4">
           <div class="model bloc1">
             <h3>Vérandas en appui</h3>
             <a href="./Verandas-en-appui.html">
@@ -278,7 +313,7 @@
           </div>
         </div>
   
-        <div class="col-sm-3 my-4">
+        <div class="col-lg-3 col-md-6 col-sm-12 my-4">
           <div class="model bloc1">
             <h3>Vérandas victoriennes </h3>
             <a href="./Verandas-victoriennes.html">
@@ -290,7 +325,7 @@
           </div>
         </div>
   
-        <div class="col-sm-3 my-4">
+        <div class="col-lg-3 col-md-6 col-sm-12 my-4">
           <div class="model bloc1">
             <h3>Vérandas victoriennes toiture arêtier </h3>
             <a href="./Verandas-victoriennes-toiture-aretier.html">
@@ -302,7 +337,7 @@
           </div>
         </div>
   
-        <div class="col-sm-3 my-4">
+        <div class="col-lg-3 col-md-6 col-sm-12 my-4">
           <div class="model bloc1">
             <h3>Vérandas rayonnantes </h3>
             <a href="./Verandas-rayonnantes.html">
@@ -328,7 +363,7 @@
           </div>
         </div>
   
-        <div class="col-sm-3 my-4">
+        <div class="col-lg-3 col-md-6 col-sm-12 my-4">
           <div class="model bloc1">
             <h3> Vérandas en pan coupé </h3>
             <a href="./Verandas-en-pan-coupe.html">
@@ -341,7 +376,7 @@
         </div>
   
   
-        <div class="col-sm-3 my-4">
+        <div class="col-lg-3 col-md-6 col-sm-12 my-4">
           <div class="model bloc1">
             <h3> Vérandas à toiture plate </h3>
             <a href="./Verandas-a-toiture-plate.html">

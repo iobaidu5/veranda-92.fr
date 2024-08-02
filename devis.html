@@ -88,8 +88,11 @@
       <div class="row justify-content-between w-100 flex-middle">
         <div class="col-md-5">
           <div class="Navbar_image">
-            <a href="./index.html" title="Accueil"><img loading="lazy" loading="lazy"
-                src="./assets/img/logoRN.png" class="Navbar_image-img" alt="Logo baies et vérandas" /></a>
+            <a href="./index.html" title="Accueil">
+              <img loading="lazy"
+                src="./assets/img/logoRN.png" class="Navbar_image-img" alt="Logo baies et vérandas" />
+              </a>
+              <img src="./assets/img/logo-veranda2.jpg" style="width: 140px;" class="img-responsive iimmgg" alt="Certification Menuisier">
           </div>
         </div>
         <div class="col-md-7 menu-haut">
@@ -152,6 +155,7 @@
       <div class="Navbar_image">
         <a href="./index.html" title="Accueil"><img loading="lazy" loading="lazy"
             src="./assets/img/logoRN.png" class="Navbar_image-img" alt="Logo baies et vérandas" /></a>
+            <img src="./assets/img/logo-veranda2.jpg" style="width: 140px;" class="img-responsive iimmgg" alt="Certification Menuisier">
       </div>
       <button class="navbar-toggler Navbar_toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -219,8 +223,9 @@
           <h2>Demandez un <strong>devis</strong></h2>
           <br><br>
         </div>
-        <div class="col-sm-6">
-          <form class="form contact_content-form" id="devisForm" method="post" action="https://jgviaboye9.execute-api.eu-west-3.amazonaws.com/prod/notify">
+        <div class="col-md-6">
+          <form class="form contact_content-form" id="devisForm" method="post"
+            action="https://jgviaboye9.execute-api.eu-west-3.amazonaws.com/prod/notify">
             <input type="hidden" name="lang" value="fr" />
             <input type="hidden" name="type" value="devis" />
             <input type="hidden" name="firstName" value="" />
@@ -233,14 +238,14 @@
                   <div class="col-sm-6">
                     <div class="form-group has-feedback ">
                       <!-- <label for="form_firstname">Prénom</label> -->
-                      <input type="text" name="firstname" id="form_firstname" value="" class="form-control"
+                      <input type="text" name="firstname" id="form_firstname"  class="form-control"
                         placeholder="Prénom">
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group has-feedback ">
                       <!-- <label for="form_lastname">Nom</label> -->
-                      <input type="text" name="lastname" id="form_lastname" value="" class="form-control"
+                      <input type="text" name="lastname" id="form_lastname" class="form-control"
                         placeholder="Nom">
                     </div>
                   </div>
@@ -249,14 +254,14 @@
                   <div class="col-sm-6">
                     <div class="form-group has-feedback ">
                       <!-- <label for="form_adress">Adresse</label> -->
-                      <input type="text" name="adress" id="form_adress" value="" class="form-control"
+                      <input type="text" name="adress" id="form_adress" class="form-control"
                         placeholder="Adresse">
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group has-feedback ">
                       <!-- <label for="form_zipcode">Code postal</label> -->
-                      <input type="text" name="zipcode" id="form_zipcode" value="" class="form-control"
+                      <input type="text" name="zipcode" id="form_zipcode" class="form-control"
                         placeholder="Code postal">
                     </div>
                   </div>
@@ -265,13 +270,13 @@
                   <div class="col-sm-6">
                     <div class="form-group has-feedback ">
                       <!-- <label for="form_city">Ville</label> -->
-                      <input type="text" name="city" id="form_city" value="" class="form-control" placeholder="Ville">
+                      <input type="text" name="city" id="form_city" class="form-control" placeholder="Ville">
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group has-feedback ">
                       <!-- <label for="form_phone">Téléphone</label> -->
-                      <input type="text" name="phone" id="form_phone" value="" class="form-control"
+                      <input type="text" name="phone" id="form_phone" class="form-control"
                         placeholder="Téléphone">
                     </div>
                   </div>
@@ -280,7 +285,7 @@
                   <div class="col-sm-6">
                     <div class="form-group has-feedback ">
                       <!-- <label for="form_email">E-mail</label> -->
-                      <input type="text" name="email" id="form_email" value="" class="form-control" placeholder="Email">
+                      <input type="text" name="email" id="form_email" class="form-control" placeholder="Email">
                     </div>
                   </div>
                   <div class="col-sm-6">
@@ -313,7 +318,9 @@
                   style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;" />
                 <span class="contact_content-form--label" style="font-size: 12px; color: #000;">
                   En utilisant ce formulaire, vous acceptez le stockage et la gestion
-                  de vos données par ce site * </span>
+                  de vos données par ce site *
+                  <a href="#" data-toggle="modal" data-target="#modal"><i class="fa fa-info-circle"></i></a>
+                </span>
                 <i class="fa fa-info-square" aria-hidden="true"></i>
               </div>
             </div>
@@ -336,7 +343,7 @@
 
           </form>
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-6">
           <div class="contact-info">
             <span class="icon-1">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -362,6 +369,26 @@
     </div>
   </div>
 </section>
+
+
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body"> * En cochant cette case, j’accepte que mes données personnelles soient collectées et
+        traitées par le service commercial de Baies et Verandas de France. Leur traitement a pour finalité de traiter
+        votre demande spécifique.<br> Les données collectées sont conservées pour la durée de nos relations commerciales
+        + 1 an. Conformément à la loi « informatique et libertés », vous pouvez exercer votre droit d’accès aux données
+        vous concernant et les faire rectifier auprès de notre référent à <a class="link" href="mailto:bvf.mazure@orange.fr">bvf.mazure@orange.fr</a>.<br> Vous disposez également d’un droit de rectification, à
+        l’oubli, à la portabilité, de limitation ou d’opposition auprès de notre référent à <a
+          href="mailto:bvf.mazure@orange.fr" class="link">bvf.mazure@orange.fr</a>.<br><br> En dernier recours, vous pouvez déposer
+        une réclamation auprès de la CNIL. </div>
+      <div class="modal-footer">
+        <div class="form-group text-center"> <button type="button" class="btn btn-default btn-primary btn-modal"
+            data-dismiss="modal">Fermer</button> </div>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
     <div class="fixphone">
       <a href="tel:01 85 53 89 71" title="01 85 53 89 71" class="button one phoneone"><i

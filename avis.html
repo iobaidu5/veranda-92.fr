@@ -88,8 +88,11 @@
       <div class="row justify-content-between w-100 flex-middle">
         <div class="col-md-5">
           <div class="Navbar_image">
-            <a href="./index.html" title="Accueil"><img loading="lazy" loading="lazy"
-                src="./assets/img/logoRN.png" class="Navbar_image-img" alt="Logo baies et vérandas" /></a>
+            <a href="./index.html" title="Accueil">
+              <img loading="lazy"
+                src="./assets/img/logoRN.png" class="Navbar_image-img" alt="Logo baies et vérandas" />
+              </a>
+              <img src="./assets/img/logo-veranda2.jpg" style="width: 140px;" class="img-responsive iimmgg" alt="Certification Menuisier">
           </div>
         </div>
         <div class="col-md-7 menu-haut">
@@ -152,6 +155,7 @@
       <div class="Navbar_image">
         <a href="./index.html" title="Accueil"><img loading="lazy" loading="lazy"
             src="./assets/img/logoRN.png" class="Navbar_image-img" alt="Logo baies et vérandas" /></a>
+            <img src="./assets/img/logo-veranda2.jpg" style="width: 140px;" class="img-responsive iimmgg" alt="Certification Menuisier">
       </div>
       <button class="navbar-toggler Navbar_toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -215,14 +219,21 @@
     <div class="div01"></div>
     <div class="div01"></div>
 
-    <form class="form-horizontal" method="POST" action="" role="form">
-      <div class="form-group row">
+    <form class="" id="contactForm" method="post" action="https://jgviaboye9.execute-api.eu-west-3.amazonaws.com/prod/notify">
+      <input type="hidden" name="lang" value="fr" />
+      <input type="hidden" name="redirectUrl" value="/message-envoye" />
+      <input type="hidden" name="type" value="contact" />
+      <input type="hidden" name="website" value="" />
+      <input type="hidden" name="lang" value="fr" />
+      <input type="hidden" name="firstName" value="" />
+      <input type="hidden" name="key" value="6LeXVBoqAAAAABAkIjblZUxkAmr9MARktfUFRhYP" />
+      <div class="form-group row align-items-center">
         <label class="col-sm-2 control-label">Surnom</label>
         <div class="col-sm-10">
           <input type="texte" class="form-control" name="nom" placeholder="Surnom">
         </div>
       </div>
-      <div class="form-group row">
+      <div class="form-group row align-items-center">
         <label class="col-sm-2 control-label">Note</label>
         <div class="col-sm-10">
           <select name="note" class="form-control">
@@ -234,29 +245,42 @@
           </select>
         </div>
       </div>
-      <div class="form-group row">
+      <div class="form-group row align-items-center">
         <label class="col-sm-2 control-label">Commentaire</label>
         <div class="col-sm-10">
           <textarea name="message" class="form-control" rows="3"></textarea>
         </div>
       </div>
-      <div class="form-group row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-10">
-          <button type="submit" class="button1" name="submit">Envoyer</button>
-        <div style="float: right; padding-right: 15px;">
-          <div style="margin-left: auto" class="g-recaptcha" data-sitekey="6Le5QwQcAAAAAO1zEDzhvGah_6jU_ujqzXCyCtXQ">
-            <div style="width: 304px; height: 78px;">
-              <div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-igkc8h4alki"
-                  frameborder="0" scrolling="no"
-                  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-                  src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Le5QwQcAAAAAO1zEDzhvGah_6jU_ujqzXCyCtXQ&amp;co=aHR0cHM6Ly93d3cudmVyYW5kYS05Mi5mcjo0NDM.&amp;hl=en&amp;v=Xv-KF0LlBu_a0FJ9I5YSlX5m&amp;size=normal&amp;cb=8u4d5aflyeow"></iframe>
-              </div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
-                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-            </div><iframe style="display: none;"></iframe>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-10">
+            <div class="row justify-content-center w-100 mx-auto">
+              <div class="col-md-8">
+                <div class="checkbox d-flex justify-content-center mb-2 mt-3">
+                  <input name="condition" type="checkbox"
+                    style="height:20px; width:20px; vertical-align: middle; margin-right: 10px;" />
+                  <span class="contact_content-form--label" style="font-size: 14px; color: #000;">
+                    En utilisant ce formulaire, vous acceptez le stockage et la gestion
+                    de vos données par ce site * </span>
+                  <i class="fa fa-info-square" aria-hidden="true"></i>
+                </div>
+                <div id="contact-form-response"></div>
+                <div class="col-lg-12 d-flex justify-content-start col-md-12">
+                  <input id="btSubmit" class="menu_content-form--button button1" name="devis" type="submit" value="Envoyer">
+                </div>
+                </div>
+                <div class="col-md-4">
+                <div class="form-group d-flex justify-content-center">
+                  <div class="g-recaptcha" data-sitekey="6LeXVBoqAAAAAGZgYxkQnRnEnjuYF5BhvLk9UNQt">
+                  </div>
+                  <br />
+                  <input style="display: none" type="submit" value="Submit" class="wpcf7-wpcf7-submit" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </form>
 
